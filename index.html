@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K Explore | Discover Events</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">K<span>EXPLORE.</span></a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Explore Events</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <a href="#events" class="nav-button">Explore Now ↗</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" id="home">
+            <p class="hero-tag">✦ YOUR NEXT EXPERIENCE STARTS HERE</p>
+
+            <h1>
+                Discover Events.<br>
+                <span>Create Memories.</span>
+            </h1>
+
+            <p class="hero-description">
+                Find extraordinary experiences, connect with people
+                and discover events that inspire you.
+            </p>
+
+            <a href="#events" class="primary-button">
+                Explore Events →
+            </a>
+        </section>
+
+        <section class="events-section" id="events">
+            <p class="section-tag">WHAT'S HAPPENING</p>
+            <h2>Explore <span>Events</span></h2>
+
+            <div class="event-controls">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search events..."
+                >
+
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="All">All</button>
+                    <button class="filter-btn" data-category="Music">Music</button>
+                    <button class="filter-btn" data-category="Technology">Technology</button>
+                    <button class="filter-btn" data-category="Workshop">Workshop</button>
+                    <button class="filter-btn" data-category="Sports">Sports</button>
+                </div>
+            </div>
+
+            <div class="event-grid" id="eventGrid">
+                <!-- Event cards will be added using JavaScript -->
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <p class="section-tag">ABOUT K EXPLORE</p>
+            <h2>Experiences Worth <span>Remembering.</span></h2>
+            <p>
+                K Explore brings exciting events together in one place.
+                Discover, connect and be part of unforgettable experiences.
+            </p>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <p class="section-tag">GET IN TOUCH</p>
+            <h2>Let's Connect.</h2>
+            <p>Have questions? We'd love to hear from you.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <a href="#" class="logo">K<span>EXPLORE.</span></a>
+        <p>© 2026 K Explore. All rights reserved.</p>
+    </footer>
+
+<!-- EVENT DETAILS AND REGISTRATION MODAL -->
+
+<div class="modal" id="eventModal">
+
+    <div class="modal-content">
+
+        <button class="close-modal" id="closeModal">&times;</button>
+
+        <p class="section-tag">EVENT INFORMATION</p>
+
+        <h2 id="modalEventName">Event Name</h2>
+
+        <div class="modal-details">
+            <p id="modalCategory"></p>
+            <p id="modalDate"></p>
+            <p id="modalVenue"></p>
+            <p id="modalDescription"></p>
+        </div>
+
+        <div class="registration-section">
+
+            <h3>Register for this Event</h3>
+
+            <form id="registrationForm">
+
+                <label for="participantName">Full Name</label>
+                <input
+                    type="text"
+                    id="participantName"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+                <label for="participantEmail">Email Address</label>
+                <input
+                    type="email"
+                    id="participantEmail"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="participantPhone">Phone Number</label>
+                <input
+                    type="tel"
+                    id="participantPhone"
+                    placeholder="Enter your 10-digit phone number"
+                    required
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                >
+
+                <label for="selectedEvent">Selected Event</label>
+                <input
+                    type="text"
+                    id="selectedEvent"
+                    readonly
+                >
+
+                <button type="submit" class="primary-button">
+                    Complete Registration →
+                </button>
+
+            </form>
+
+            <p id="confirmationMessage"></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
